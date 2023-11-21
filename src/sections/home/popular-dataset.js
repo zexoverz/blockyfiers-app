@@ -9,7 +9,8 @@ import Typography from '@mui/material/Typography';
 // components
 import { MotionViewport, varFade } from 'src/components/animate';
 import { Button, CardActions, CardContent, CardMedia, Divider } from '@mui/material';
-
+import { RouterLink } from 'src/routes/components';
+import { PATH_AFTER_LOGIN } from 'src/config-global';
 // ----------------------------------------------------------------------
 
 const CARDS = [
@@ -132,7 +133,7 @@ export default function PopularDataset() {
                         <Divider/>
                     </CardContent>
                     <Box textAlign={"center"} sx={{marginBottom: 2}}>
-                        <Button size="medium" color='primary' >Request Dataset</Button>
+                        <Button size="medium" color='primary' component={RouterLink} href={PATH_AFTER_LOGIN} >Request Dataset</Button>
                     </Box>
             </Card>
           </m.div>
